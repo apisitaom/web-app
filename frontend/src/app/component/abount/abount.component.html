@@ -1,0 +1,78 @@
+<body background="assets/img/1gun.jpg" >
+
+ <br>
+   &nbsp;&nbsp;&nbsp;<a mat-stroked-button [routerLink]="['/list']"><i class="material-icons">
+    home
+  </i>กรอกข้อมูลของผู้สมมัครงาน</a>
+  &nbsp;
+  &nbsp;&nbsp;&nbsp;<a mat-stroked-button [routerLink]="['/list']"><i class="material-icons">
+   
+ </i>กรอกข้อมูลของผู้สมมัครงาน</a>
+
+
+  <mat-card class="example-card"> 
+  
+  <body>
+    
+    <br>
+    <br>
+  
+
+
+
+      <mat-form-field class="example-mid-width">
+        <input matInput placeholder="ชื่อผู้สมัคร " value=" " [(ngModel)]="firstName">
+      </mat-form-field>
+
+      
+
+      &nbsp;&nbsp;
+  
+      <mat-form-field class="example-mid-width">
+        <input matInput placeholder="นามสกุลผู้สมัคร" value=" "[(ngModel)]="lastName">
+      </mat-form-field>
+
+  
+      <br>
+  
+      <mat-form-field class="example-mid-width">
+        <input matInput placeholder="ที่อยู่ผู้สมัคร" value=" "[(ngModel)]="address">
+      </mat-form-field>
+  
+ 
+
+      &nbsp;&nbsp;
+  
+      <mat-form-field class="example-mid-width">
+        <input matInput placeholder="เบอร์โทรผู้สมัคร" value=" "[(ngModel)]="phoneNumber">
+      </mat-form-field>
+  
+      <br>
+  
+      <mat-form-field class="example-mid-width">
+        <input matInput placeholder="เงินเดือนที่ต้องการ" value=" "[(ngModel)]="salary">
+      </mat-form-field>
+  
+      &nbsp;&nbsp;
+  
+      <mat-form-field class="example-mid-width">
+        <input matInput placeholder="สัญชาติของผู้สมัคร" value=" "[(ngModel)]="natoinality">
+      </mat-form-field>
+  
+      <br>
+
+      <mat-form-field  class="example-mid2-width">
+        <mat-select placeholder="เลือกตำเเหน่ง" [(ngModel)]="positionSelect" name="positions">
+          <mat-option *ngFor="let gd of positions" [value]="gd.idPosition">
+            {{gd.position}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <br>
+  
+      <button mat-fab color="primary" class="example-full-width" (click)="register()" >เสร็จสิ้น</button>
+  
+    </body>
+  
+  </mat-card>
